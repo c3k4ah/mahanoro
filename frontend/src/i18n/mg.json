@@ -1,0 +1,57 @@
+{
+  "common": {
+    "readMore": "Hamaky bebe kokoa",
+    "allNews": "Rehetra",
+    "search": "Hitady vaovao...",
+    "results": "valiny",
+    "result": "valiny",
+    "previous": "Taloha",
+    "next": "Manaraka",
+    "backToNews": "Hiverina amin'ny vaovao",
+    "backToHome": "Hiverina amin'ny fandraisana",
+    "noResults": "Tsy misy vaovao hita",
+    "noEvents": "Tsy misy hetsika ho aseho amin'izao fotoana izao"
+  },
+  "header": {
+    "cityName": "Mahanoro Actu",
+    "home": "Fandraisana",
+    "news": "Vaovao",
+    "events": "Hetsika",
+    "about": "Momba anay"
+  },
+  "footer": {
+    "copyright": "- DOMINICK Randriamanantena Grégoire"
+  },
+  "home": {
+    "hero": {
+      "title": "Tongasoa eto Mahanoro",
+      "subtitle": "Mahareta amin'ny vaovao rehetra momba ny kaomininantsika: hetsika, fampandrosoana eo an-toerana, hetsika vondrom-piarahamonina ary fiainam-poteran-kala ao amin'ny faritra Atsinanana."
+    },
+    "latestNews": "Vaovao farany",
+    "viewAllNews": "Hijery ny vaovao rehetra",
+    "upcomingEvents": "Hetsika ho avy",
+    "viewAllEvents": "Hijery ny hetsika rehetra"
+  },
+  "news": {
+    "title": "Vaovao",
+    "searchPlaceholder": "Hitady vaovao...",
+    "notFound": "Tsy hita ny vaovao"
+  },
+  "events": {
+    "title": "Hetsika",
+    "upcoming": "Hetsika ho avy",
+    "past": "Hetsika lasa"
+  },
+  "about": {
+    "title": "Momba an'i Mahanoro",
+    "history": "Ny tantarantsika",
+    "gallery": "Mahanoro amin'ny sary",
+    "location": "Toerana misy antsika",
+    "cityHall": "Kaominina Mahanoro",
+    "mapPlaceholder": "Sarintany interaktifa (Google Maps / OpenStreetMap)"
+  },
+  "notFound": {
+    "title": "Pejy tsy hita",
+    "message": "Ny pejy tadiavinao dia tsy misy na nafindra."
+  }
+}

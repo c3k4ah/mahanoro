@@ -1,0 +1,57 @@
+{
+  "common": {
+    "readMore": "Lire plus",
+    "allNews": "Toutes",
+    "search": "Rechercher une actualité...",
+    "results": "résultats",
+    "result": "résultat",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "backToNews": "Retour aux actualités",
+    "backToHome": "Retour à l'accueil",
+    "noResults": "Aucune actualité trouvée",
+    "noEvents": "Aucun événement à afficher pour le moment"
+  },
+  "header": {
+    "cityName": "Mahanoro Actu",
+    "home": "Accueil",
+    "news": "Actualités",
+    "events": "Événements",
+    "about": "À propos"
+  },
+  "footer": {
+    "copyright": "- DOMINICK Randriamanantena Grégoire"
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenue à Mahanoro",
+      "subtitle": "Restez informés de toute l'actualité de notre commune : événements, développement local, initiatives communautaires et vie municipale dans la région Atsinanana."
+    },
+    "latestNews": "Dernières actualités",
+    "viewAllNews": "Voir toutes les actualités",
+    "upcomingEvents": "Événements à venir",
+    "viewAllEvents": "Voir tous les événements"
+  },
+  "news": {
+    "title": "Actualités",
+    "searchPlaceholder": "Rechercher une actualité...",
+    "notFound": "Actualité introuvable"
+  },
+  "events": {
+    "title": "Événements",
+    "upcoming": "Événements à venir",
+    "past": "Événements passés"
+  },
+  "about": {
+    "title": "À propos de Mahanoro",
+    "history": "Notre histoire",
+    "gallery": "Mahanoro en images",
+    "location": "Localisation",
+    "cityHall": "Mairie de Mahanoro (Kaominina Mahanoro)",
+    "mapPlaceholder": "Carte interactive (Google Maps / OpenStreetMap)"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "message": "La page que vous recherchez n'existe pas ou a été déplacée."
+  }
+}
