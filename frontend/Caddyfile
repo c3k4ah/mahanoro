@@ -1,4 +1,4 @@
-mahanoro.holy-dev.mg {
+:80 {
     # Rediriger l'API vers PocketBase
     handle /api/* {
         reverse_proxy pocketbase:8090

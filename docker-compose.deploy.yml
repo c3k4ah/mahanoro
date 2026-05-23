@@ -5,8 +5,7 @@ services:
       dockerfile: Dockerfile.deploy
     container_name: mahanoro-web
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
     depends_on:
       - pocketbase
     restart: unless-stopped
