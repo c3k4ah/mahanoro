@@ -1,0 +1,25 @@
+services:
+  mahanoro:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: mahanoro-prod
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - pb_data:/pb_data
+    environment:
+      - PB_ENCRYPTION_KEY=${PB_ENCRYPTION_KEY:-}
+    command: >
+      /pb/pocketbase serve
+      --http=0.0.0.0:80
+      --https=mahanoro.holy-dev.mg
+      --dir=/pb_data
+      --migrationsDir=/pb_migrations
+      --hooksDir=/pb_hooks
+      --publicDir=/pb_public
+    restart: unless-stopped
+
+volumes:
+  pb_data:

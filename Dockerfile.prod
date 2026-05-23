@@ -1,0 +1,31 @@
+# Stage 1: Build the frontend
+FROM node:22-alpine AS build-frontend
+WORKDIR /app
+COPY frontend/package*.json ./
+RUN npm ci
+COPY frontend/ ./
+RUN npm run build
+
+# Stage 2: PocketBase + static files
+FROM alpine:3.21 AS production
+ARG PB_VERSION=0.26.6
+
+# Téléchargement de PocketBase
+ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
+RUN apk add --no-cache unzip \
+    && unzip /tmp/pb.zip -d /pb \
+    && rm /tmp/pb.zip \
+    && apk del unzip
+
+# Copie des fichiers compilés du frontend vers le dossier public de PocketBase
+COPY --from=build-frontend /app/dist /pb_public
+
+# Copie des migrations et hooks
+COPY backend/pb_migrations /pb_migrations
+COPY backend/pb_hooks /pb_hooks
+
+# Exposition des ports pour HTTP et HTTPS
+EXPOSE 80
+EXPOSE 443
+
+CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:80", "--dir=/pb_data", "--migrationsDir=/pb_migrations", "--hooksDir=/pb_hooks", "--publicDir=/pb_public"]
