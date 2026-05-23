@@ -46,7 +46,7 @@ export async function fetchArticles(): Promise<Article[]> {
         category: r.category,
         excerpt: r.excerpt,
         content: r.content,
-        imageUrl: r.imageUrl,
+        imageUrl: r.imageUrl ? `${PB_URL}/api/files/${r.collectionId}/${r.id}/${r.imageUrl}` : "",
         publishedAt: r.publishedAt,
         isFeatured: r.isFeatured,
     }));
@@ -63,7 +63,7 @@ export async function fetchEvents(): Promise<Event[]> {
         location: r.location,
         startDate: r.startDate,
         endDate: r.endDate,
-        imageUrl: r.imageUrl,
+        imageUrl: r.imageUrl ? `${PB_URL}/api/files/${r.collectionId}/${r.id}/${r.imageUrl}` : "",
         isArchived: r.isArchived,
     }));
 }
