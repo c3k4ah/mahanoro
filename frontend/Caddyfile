@@ -1,0 +1,18 @@
+mahanoro.holy-dev.mg {
+    # Rediriger l'API vers PocketBase
+    handle /api/* {
+        reverse_proxy pocketbase:8090
+    }
+    
+    # Rediriger l'interface d'administration vers PocketBase
+    handle /_/* {
+        reverse_proxy pocketbase:8090
+    }
+
+    # Servir l'application frontend (fichiers statiques)
+    handle {
+        root * /srv/public
+        try_files {path} /index.html
+        file_server
+    }
+}
