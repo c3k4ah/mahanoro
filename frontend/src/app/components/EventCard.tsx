@@ -25,10 +25,11 @@ export function EventCard({
     <article className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <div className="relative">
         <img
-          src={imageUrl}
+          src={imageUrl || "/placeholder.png"}
           alt={title}
           className="w-full h-40 object-cover"
           loading="lazy"
+          onError={(e) => { (e.target as HTMLImageElement).src = "/placeholder.png"; }}
         />
       </div>
       <div className="p-4">

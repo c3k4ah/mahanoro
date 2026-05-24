@@ -34,12 +34,13 @@ export function ArticleCard({
       <Link to={`/actualites/${slug}`}>
         <div className="relative">
           <img
-            src={imageUrl}
+            src={imageUrl || "/placeholder.png"}
             alt={title}
             className={`w-full object-cover ${
               featured ? "h-64 md:h-96" : "h-48"
             }`}
             loading="lazy"
+            onError={(e) => { (e.target as HTMLImageElement).src = "/placeholder.png"; }}
           />
           <div className="absolute top-3 left-3">
             <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">

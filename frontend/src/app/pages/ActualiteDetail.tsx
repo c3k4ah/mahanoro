@@ -66,9 +66,10 @@ export function ActualiteDetail() {
 
       {/* Image */}
       <img
-        src={article.imageUrl}
+        src={article.imageUrl || "/placeholder.png"}
         alt={article.title}
         className="w-full h-64 md:h-96 object-cover rounded-lg mb-8"
+        onError={(e) => { (e.target as HTMLImageElement).src = "/placeholder.png"; }}
       />
 
       {/* Content */}
